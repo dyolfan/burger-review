@@ -1,13 +1,13 @@
-package academy.learnprogramming;
+package academy.learnprogramming.burgers;
 
+
+import academy.learnprogramming.MenuRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static academy.learnprogramming.Additions.*;
-
 public class BaseBurger {
-    private static final List<Additions> BASE_ADDITIONS = List.of(LETTUCE, TOMATO, CARROT, CHEESE);
+    private static final List<Additions> BASE_ADDITIONS = List.of(Additions.LETTUCE, Additions.TOMATO, Additions.CARROT, Additions.CHEESE);
     private final double price;
     private final String name;
 
@@ -20,7 +20,7 @@ public class BaseBurger {
 
     private final int maximumAdditions;
 
-    public BaseBurger(double price, String name, String rollType, String meat, int maximumAdditions) {
+    BaseBurger(double price, String name, String rollType, String meat, int maximumAdditions) {
         this(price, name, rollType, meat, maximumAdditions, List.of());
     }
 

@@ -1,4 +1,4 @@
-package academy.learnprogramming;
+package academy.learnprogramming.burgers;
 
 public class BurgerFactory {
     public static BaseBurger createBaseBurger(double price, String rollType, String meat, String name) {

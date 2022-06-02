@@ -1,5 +1,8 @@
 package academy.learnprogramming;
 
+import academy.learnprogramming.burgers.Additions;
+import academy.learnprogramming.burgers.BaseBurger;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package academy.learnprogramming;
+package academy.learnprogramming.burgers;
 
 public enum Additions {
     LETTUCE(0.50, "Lettuce"), TOMATO(0.45, "Tomato"), CARROT(0.24, "Carrot"),
