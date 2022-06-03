@@ -2,6 +2,7 @@ package academy.learnprogramming;
 
 import academy.learnprogramming.burgers.Additions;
 import academy.learnprogramming.burgers.BaseBurger;
+import academy.learnprogramming.burgers.Burger;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -9,9 +10,9 @@ import java.util.Scanner;
 
 public class MenuRenderer {
     private static final DecimalFormat NUMBER_FORMAT = new DecimalFormat("0.00");
-    private final BaseBurger burger;
+    private final Burger burger;
 
-    public MenuRenderer(BaseBurger burger) {
+    public MenuRenderer(Burger burger) {
         this.burger = burger;
     }
 
@@ -44,7 +45,7 @@ public class MenuRenderer {
                 printBurgerPrice(burger);
             }
             Additions selectedAddition = additionsList.get(menuOption - 1);
-            burger.addAddition(selectedAddition);
+            ((BaseBurger) burger).addAddition(selectedAddition);
             printAdditionAdded(selectedAddition);
             printBurgerPrice(burger);
             additionsLeft--;
@@ -69,7 +70,7 @@ public class MenuRenderer {
         return stringBuilder.toString();
     }
 
-    private void printBurgerPrice(BaseBurger burger) {
+    private void printBurgerPrice(Burger burger) {
         System.out.println("Burger price = " + (formatNumber(burger.getPrice())) + "$");
     }
 

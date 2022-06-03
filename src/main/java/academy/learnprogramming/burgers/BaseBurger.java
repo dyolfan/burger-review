@@ -6,7 +6,7 @@ import academy.learnprogramming.MenuRenderer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseBurger {
+public class BaseBurger implements Burger {
     private static final List<Additions> BASE_ADDITIONS = List.of(Additions.LETTUCE, Additions.TOMATO, Additions.CARROT, Additions.CHEESE);
     private final double price;
     private final String name;
@@ -39,26 +39,32 @@ public class BaseBurger {
         this.meat = meat;
     }
 
+    @Override
     public List<Additions> getBaseAdditions() {
         return BASE_ADDITIONS;
     }
 
+    @Override
     public String getName() {
         return this.name;
     }
 
+    @Override
     public String getMeat() {
         return this.meat;
     }
 
+    @Override
     public String getRoll() {
         return this.rollType;
     }
 
+    @Override
     public List<Additions> getAdditions() {
         return this.additions;
     }
 
+    @Override
     public int getMaximumAdditions() {
         return maximumAdditions;
     }
@@ -67,25 +73,30 @@ public class BaseBurger {
         this.selectedAdditions.add(addition);
     }
 
+    @Override
     public double getBasePrice() {
         return this.price;
     }
 
+    @Override
     public double getPrice() {
         return this.selectedAdditions.stream()
                 .map(Additions::getPrice)
                 .reduce(this.price, Double::sum);
     }
 
+    @Override
     public List<Additions> getSelectedAdditions() {
         return this.selectedAdditions;
     }
 
+    @Override
     public void showMenu() {
         showMenu(this);
     }
 
-    public void showMenu(BaseBurger burger) {
+    @Override
+    public void showMenu(Burger burger) {
         new MenuRenderer(burger).renderMenu();
     }
 }
