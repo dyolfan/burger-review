@@ -12,4 +12,7 @@ public class BurgerFactory {
     public static Burger createDeluxeBurger(double price, String rollType, String meat, String name) {
         return new DeluxeBurger(price, name, meat, rollType);
     }
+    public static Burger createFlexBurger(double price, String rollType, String meat, String name) {
+        return new FlexBurger(price, name, meat, rollType);
+    }
 }

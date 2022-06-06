@@ -10,5 +10,7 @@ public class Main {
         BurgerFactory.createDeluxeBurger(3d, "Булочка с сезамом", "Говядина", "Топчик").showMenu();
 
         BurgerFactory.createHealthyBurger(3.50d, "Блины из коровьего говна", "Мезинец повара", "Тапок").showMenu();
+
+        BurgerFactory.createFlexBurger(3.50d, "Батька бургер", "Свинина", "").showMenu();
     }
 }
